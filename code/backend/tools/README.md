@@ -46,9 +46,9 @@ win left and the one that can quietly weaken the harness: a mutant that was only
 test the narrowing excluded would start "surviving", or stop being asked at all. Every mutant that
 runs runs every file in `SUITE`.
 
-On a GitHub runner the whole job is **about 8 minutes** for all 71 — 7m28s and 8m51s on the two
-runs measured — and a pull request that touches one module is a fraction of that. It was 32m11s on
-PR #146.
+On a GitHub runner the whole job came in at **7m28s, 8m51s and 10m24s** over three runs of all 71
+— the runner itself is the variable, not the harness — and a pull request that touches one module
+is a fraction of that. It was 32m11s on PR #146.
 
 `--workers` is a dial; the 120s suite timeout is not. It is a hang detector with six times the
 headroom a green run needs, and raising it to make a red run go green would hide the thing it is
